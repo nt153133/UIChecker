@@ -40,94 +40,137 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // listBox1
+            // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(12, 23);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.listBox1.Location = new System.Drawing.Point(10, 20);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(241, 454);
+            this.listBox1.Size = new System.Drawing.Size(207, 394);
             this.listBox1.TabIndex = 0;
-            this.button1.Location = new System.Drawing.Point(12, 483);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(10, 419);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 25);
+            this.button1.Size = new System.Drawing.Size(71, 22);
             this.button1.TabIndex = 1;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(176, 482);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Location = new System.Drawing.Point(151, 418);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 25);
+            this.button2.Size = new System.Drawing.Size(65, 22);
             this.button2.TabIndex = 2;
             this.button2.Text = "Select";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // listBox2
+            // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(262, 23);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.listBox2.Location = new System.Drawing.Point(225, 20);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(293, 454);
+            this.listBox2.Size = new System.Drawing.Size(252, 394);
             this.listBox2.TabIndex = 3;
+            // 
+            // button3
+            // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(272, 482);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Location = new System.Drawing.Point(233, 418);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 25);
+            this.button3.Size = new System.Drawing.Size(79, 22);
             this.button3.TabIndex = 4;
             this.button3.Text = "Check Info";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // listBox3
+            // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 15;
-            this.listBox3.Location = new System.Drawing.Point(561, 23);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.listBox3.Location = new System.Drawing.Point(481, 20);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(360, 169);
+            this.listBox3.Size = new System.Drawing.Size(309, 147);
             this.listBox3.TabIndex = 5;
-            this.button4.Location = new System.Drawing.Point(564, 207);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(483, 179);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 33);
+            this.button4.Size = new System.Drawing.Size(111, 29);
             this.button4.TabIndex = 6;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button5.Location = new System.Drawing.Point(701, 207);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(601, 179);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 33);
+            this.button5.Size = new System.Drawing.Size(94, 29);
             this.button5.TabIndex = 7;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.richTextBox1.Location = new System.Drawing.Point(561, 262);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(481, 227);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(360, 118);
+            this.richTextBox1.Size = new System.Drawing.Size(309, 103);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
-            this.button6.Location = new System.Drawing.Point(399, 481);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(342, 417);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(65, 25);
+            this.button6.Size = new System.Drawing.Size(56, 22);
             this.button6.TabIndex = 9;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button7.Location = new System.Drawing.Point(526, 485);
+            // 
+            // button7
+            // 
+            this.button7.Enabled = false;
+            this.button7.Location = new System.Drawing.Point(451, 420);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(79, 20);
+            this.button7.Size = new System.Drawing.Size(68, 17);
             this.button7.TabIndex = 10;
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(493, 370);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(222, 20);
+            this.textBox1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(492, 352);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "CE SendAction Breakpoint";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 519);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.richTextBox1);
@@ -139,24 +182,27 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "UI Checker";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
-        #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox1;
+
+        #endregion
     }
 }

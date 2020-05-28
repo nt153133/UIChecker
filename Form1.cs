@@ -74,7 +74,8 @@ namespace UI_Checker
                         data = $"{i.Data}({i.TrimmedData})";
 
                     listBox2.Items.Add($"[{j}:{i.Type}] {data}");
-                    outputFile.WriteLine($"{j},{i.Type},{i.Data},{i.TrimmedData},{data}");
+                    IntPtr ptr = (IntPtr) i.Data;
+                    outputFile.WriteLine($"{j},{i.Type},{i.Data},{i.TrimmedData},{data},{ptr.ToInt64():X}");
                     LlamaUI.Log($"{windowName}.cvs Written");
                 }
             }
@@ -85,7 +86,8 @@ namespace UI_Checker
 //                Core.Memory.GetRelative()
                 var test = windowByName.TryFindAgentInterface();
                 richTextBox1.Text += $"Agent ID is: {test.Id}\n";
-                richTextBox1.Text += $"Pointer: {test.Pointer.ToInt64():X} \nVtable: {test.VTable.ToInt64():X} \nVtableOffset {Core.Memory.GetRelative(test.VTable).ToInt64():X}\n";
+                richTextBox1.Text += $"Pointer: {test.Pointer.ToInt64():X} \nAgent Vtable: {test.VTable.ToInt64():X} \nVtableOffset {Core.Memory.GetRelative(test.VTable).ToInt64():X}\n";
+                richTextBox1.Text += $"Window Pointer: {windowByName.Pointer.ToInt64():X} \nWindow Vtable: {windowByName.VTable.ToInt64():X} \nVtableOffset {Core.Memory.GetRelative(windowByName.VTable).ToInt64():X}\n";
                 //richTextBox1.Text += $"Size is: {sizeof(ResultLayout)}\n";
             }
 
@@ -105,7 +107,7 @@ namespace UI_Checker
             LlamaUI.Log($"{windowName} Selected");
             var elements = LlamaUI.___Elements(windowName);
             
-            listBox3.Items.Add($"[Selected NPC 1] {LlamaUI.GetTrustNpc(elements[34].TrimmedData).Name} ({LlamaUI.GetTrustNpc(elements[34].TrimmedData).Class()}) Level: {elements[43].TrimmedData}");
+/*            listBox3.Items.Add($"[Selected NPC 1] {LlamaUI.GetTrustNpc(elements[34].TrimmedData).Name} ({LlamaUI.GetTrustNpc(elements[34].TrimmedData).Class()}) Level: {elements[43].TrimmedData}");
             listBox3.Items.Add($"[Selected NPC 2] {LlamaUI.GetTrustNpc(elements[35].TrimmedData).Name} ({LlamaUI.GetTrustNpc(elements[35].TrimmedData).Class()}) Level: {elements[44].TrimmedData}");
             listBox3.Items.Add($"[Selected NPC 3] {LlamaUI.GetTrustNpc(elements[36].TrimmedData).Name} ({LlamaUI.GetTrustNpc(elements[36].TrimmedData).Class()}) Level: {elements[45].TrimmedData}");
 
@@ -113,7 +115,7 @@ namespace UI_Checker
             listBox3.Items.Add($"Selected Trust Id: {elements[74].TrimmedData}");
             var data = Core.Memory.ReadString((IntPtr) elements[75].Data, Encoding.UTF8);
             listBox3.Items.Add($"Selected Trust Name: {data}");
-            button3.Enabled = false;
+            button3.Enabled = false;*/
         }
 
         private List<string> trusts(TwoInt[] elements)
@@ -222,6 +224,15 @@ namespace UI_Checker
             foreach (var result in results)
             {
                 listBox3.Items.Add($"Hq: {result.HQ == 1} Qty: {result.qty} Price: {result.price}");
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            using (var patternFinder = new GreyMagic.PatternFinder(Core.Memory))
+            {
+                IntPtr SendActionBreakpoint = patternFinder.Find("48 85 C0 74 ? 48 89 18 4C 8D 70 ? 49 8B C6 48 85 DB 74 ? 89 30");
+                textBox1.Text = ($"ffxiv_dx11.exe+{Core.Memory.GetRelative(SendActionBreakpoint).ToString("X")}");
             }
         }
     }
