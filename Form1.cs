@@ -84,10 +84,26 @@ namespace UI_Checker
             if(windowByName != null)
             {
 //                Core.Memory.GetRelative()
-                var test = windowByName.TryFindAgentInterface();
-                richTextBox1.Text += $"Agent ID is: {test.Id}\n";
-                richTextBox1.Text += $"Pointer: {test.Pointer.ToInt64():X} \nAgent Vtable: {test.VTable.ToInt64():X} \nVtableOffset {Core.Memory.GetRelative(test.VTable).ToInt64():X}\n";
+
+                AgentInterface test;
+                try
+                {
+                    test = windowByName.TryFindAgentInterface();
+                    richTextBox1.Text += $"Agent ID is: {test.Id}\n";
+                    richTextBox1.Text += $"Pointer: {test.Pointer.ToInt64():X} \nAgent Vtable: {test.VTable.ToInt64():X} \nVtableOffset {Core.Memory.GetRelative(test.VTable).ToInt64():X}\n";
+                }
+                catch
+                {
+                    
+                }
+
+                
                 richTextBox1.Text += $"Window Pointer: {windowByName.Pointer.ToInt64():X} \nWindow Vtable: {windowByName.VTable.ToInt64():X} \nVtableOffset {Core.Memory.GetRelative(windowByName.VTable).ToInt64():X}\n";
+
+                //var test = AgentModule.GetAgentInterfaceById(99);
+              //  test.Toggle();
+               // var testbyte = Core.Memory.Read<byte>(test.Pointer + 0x10);
+              //  richTextBox1.Text += $"{testbyte}";
                 //richTextBox1.Text += $"Size is: {sizeof(ResultLayout)}\n";
             }
 
